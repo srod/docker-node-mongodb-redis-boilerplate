@@ -1,0 +1,16 @@
+{
+  "apps": [
+    {
+      "name": "myapp",
+      "script": "/myapp/server/app.js",
+      "ignore_watch": [
+        "node_modules",
+        "logs"
+      ],
+      "watch": true,
+      "env": {
+        "NODE_ENV": "development"
+      }
+    }
+  ]
+}

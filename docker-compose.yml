@@ -1,0 +1,14 @@
+web:
+  build: .
+  command: pm2 start -x /myapp/server/processes.json --no-daemon --watch
+  volumes:
+    - .:/myapp
+  ports:
+    - "3000:3000"
+  links:
+     - mongo
+     - redis
+mongo:
+  image: mongo:latest
+redis:
+  image: redis:latest
